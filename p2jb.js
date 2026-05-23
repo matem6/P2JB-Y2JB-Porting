@@ -79,13 +79,10 @@
             "12.00": { DATA_BASE_ALLPROC: 0x02885E00n },
         };
         const FW_ALIAS_P2JB = {
-            "9.00": "9.00",
-            "9.03": "9.05", "9.04": "9.05", "9.20": "9.05", "9.40": "9.05", "9.51": "9.05", "9.60": "9.05",
+            "9.00": "9.00","9.03": "9.05", "9.04": "9.05", "9.20": "9.05", "9.40": "9.05", "9.51": "9.05", "9.60": "9.05",
             "10.00": "10.00", "10.01": "10.00", "10.20": "10.00", "10.40": "10.00", "10.50": "10.00", "10.60": "10.00", "10.70": "10.00",
-            "11.00": "11.00", "11.02": "11.00", "11.20": "11.00", "11.40": "11.00",
-            "11.50": "11.00", "11.60": "11.00", "11.61": "11.00",
-            "12.00": "12.00", "12.02": "12.00", "12.20": "12.00", "12.40": "12.00",
-            "12.50": "12.00", "12.60": "12.00", "12.70": "12.00",
+            "11.00": "11.00", "11.02": "11.00", "11.20": "11.00", "11.40": "11.00","11.50": "11.00", "11.60": "11.00", "11.61": "11.00",
+            "12.00": "12.00", "12.02": "12.00", "12.20": "12.00", "12.40": "12.00","12.50": "12.00", "12.60": "12.00", "12.70": "12.00",
         };
 
         function ensure_kernel_offset() {
@@ -107,22 +104,27 @@
 
             kernel_offset = {
                 DATA_BASE_ALLPROC: fw.DATA_BASE_ALLPROC,
-
-                PROC_PID: 0xBCn, PROC_UCRED: 0x40n, PROC_FD: 0x48n,
-
-                UCRED_CR_UID: 0x04n, UCRED_CR_RUID: 0x08n, UCRED_CR_SVUID: 0x0Cn,
-                UCRED_CR_NGROUPS: 0x10n, UCRED_CR_RGID: 0x14n,
+                PROC_PID: 0xBCn, 
+                PROC_UCRED: 0x40n, 
+                PROC_FD: 0x48n,
+                UCRED_CR_UID: 0x04n, 
+                UCRED_CR_RUID: 0x08n, 
+                UCRED_CR_SVUID: 0x0Cn,
+                UCRED_CR_NGROUPS: 0x10n, 
+                UCRED_CR_RGID: 0x14n,
                 UCRED_CR_SVGID: 0x18n,
-                UCRED_CR_SCEAUTHID: 0x58n, UCRED_CR_SCECAPS0: 0x60n,
+                UCRED_CR_SCEAUTHID: 0x58n, 
+                UCRED_CR_SCECAPS0: 0x60n,
                 UCRED_CR_SCECAPS1: 0x68n,
-
-                FILEDESC_OFILES: 0x00n, FDESCENTTBL_HDR: 0x08n,
+                FILEDESC_OFILES: 0x00n, 
+                FDESCENTTBL_HDR: 0x08n,
                 FILEDESCENT_SIZE: 0x30n,
-
-                FD_CDIR: 0x08n, FD_RDIR: 0x10n, FD_JDIR: 0x18n, KQ_FDP: 0xA8n,
-
-                INPCB_PKTOPTS: 0x120n, IP6PO_RTHDR: 0x70n,
-
+                FD_CDIR: 0x08n, 
+                FD_RDIR: 0x10n, 
+                FD_JDIR: 0x18n,
+                KQ_FDP: 0xA8n,
+                INPCB_PKTOPTS: 0x120n, 
+                IP6PO_RTHDR: 0x70n,
                 PIPE_SIGIO: 0xD8n,
             };
         }
